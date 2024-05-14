@@ -1,21 +1,62 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
+using Newtonsoft.Json;
 
 namespace APIVerve
 {
-    using Newtonsoft.Json;
+public class data
+{
+    [JsonProperty("domainStatus")]
+    public string[] domainStatus { get; set; }
+
+    [JsonProperty("domainName")]
+    public string domainName { get; set; }
+
+    [JsonProperty("registryDomainID")]
+    public string registryDomainID { get; set; }
+
+    [JsonProperty("registrarWHOISServer")]
+    public string registrarWHOISServer { get; set; }
+
+    [JsonProperty("registrarURL")]
+    public string registrarURL { get; set; }
+
+    [JsonProperty("updatedDate")]
+    public DateTime updatedDate { get; set; }
+
+    [JsonProperty("createdDate")]
+    public DateTime createdDate { get; set; }
+
+    [JsonProperty("expiryDate")]
+    public DateTime expiryDate { get; set; }
+
+    [JsonProperty("registrar")]
+    public string registrar { get; set; }
+
+    [JsonProperty("registrarIANAID")]
+    public string registrarIANAID { get; set; }
+
+    [JsonProperty("registrarAbuseContactEmail")]
+    public string registrarAbuseContactEmail { get; set; }
+
+    [JsonProperty("registrarAbuseContactPhone")]
+    public string registrarAbuseContactPhone { get; set; }
+
+    [JsonProperty("dNSSEC")]
+    public string dNSSEC { get; set; }
+
+}
 
 public class ResponseObj
 {
     [JsonProperty("status")]
-    public string Status { get; set; }
+    public string status { get; set; }
 
     [JsonProperty("error")]
-    public string Error { get; set; }
+    public object error { get; set; }
 
     [JsonProperty("data")]
-    public object Data { get; set; }
+    public data data { get; set; }
 
 }
 

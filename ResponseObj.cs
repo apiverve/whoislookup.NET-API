@@ -4,63 +4,64 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("domainStatus")]
-    public string[] domainStatus { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("domainStatus")]
+        public string[] DomainStatus { get; set; }
 
-    [JsonProperty("domainName")]
-    public string domainName { get; set; }
+        [JsonProperty("domainName")]
+        public string DomainName { get; set; }
 
-    [JsonProperty("registryDomainID")]
-    public string registryDomainID { get; set; }
+        [JsonProperty("registryDomainID")]
+        public string RegistryDomainID { get; set; }
 
-    [JsonProperty("registrarWHOISServer")]
-    public string registrarWHOISServer { get; set; }
+        [JsonProperty("registrarWHOISServer")]
+        public string RegistrarWHOISServer { get; set; }
 
-    [JsonProperty("registrarURL")]
-    public string registrarURL { get; set; }
+        [JsonProperty("registrarURL")]
+        public string RegistrarURL { get; set; }
 
-    [JsonProperty("updatedDate")]
-    public DateTime updatedDate { get; set; }
+        [JsonProperty("updatedDate")]
+        public string UpdatedDate { get; set; }
 
-    [JsonProperty("createdDate")]
-    public DateTime createdDate { get; set; }
+        [JsonProperty("createdDate")]
+        public string CreatedDate { get; set; }
 
-    [JsonProperty("expiryDate")]
-    public DateTime expiryDate { get; set; }
+        [JsonProperty("expiryDate")]
+        public string ExpiryDate { get; set; }
 
-    [JsonProperty("registrar")]
-    public string registrar { get; set; }
+        [JsonProperty("registrar")]
+        public string Registrar { get; set; }
 
-    [JsonProperty("registrarIANAID")]
-    public string registrarIANAID { get; set; }
+        [JsonProperty("registrarIANAID")]
+        public string RegistrarIANAID { get; set; }
 
-    [JsonProperty("registrarAbuseContactEmail")]
-    public string registrarAbuseContactEmail { get; set; }
+        [JsonProperty("registrarAbuseContactEmail")]
+        public string RegistrarAbuseContactEmail { get; set; }
 
-    [JsonProperty("registrarAbuseContactPhone")]
-    public string registrarAbuseContactPhone { get; set; }
+        [JsonProperty("registrarAbuseContactPhone")]
+        public string RegistrarAbuseContactPhone { get; set; }
 
-    [JsonProperty("dNSSEC")]
-    public string dNSSEC { get; set; }
+        [JsonProperty("dNSSEC")]
+        public string DNSSEC { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
